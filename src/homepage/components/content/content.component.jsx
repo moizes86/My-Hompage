@@ -11,10 +11,9 @@ import ContactMe from './contact-me/contact-me.component';
 import './content.styles.scss';
 
 const Content = ({match}) => {
-  console.log('CONTENT');
   return (
     <div className='content'>
-        <Route exact path={`${match.url}/introduction`} component={Introduction} />
+        <Route exact path={`${match.url}`} component={Introduction} />
         <Route exact path={`${match.url}/portfolio`} component={Portfolio} />
         <Route exact path={`${match.url}/cv`} component={MyCV} />
         <Route exact path={`${match.url}/contact`} component={ContactMe} />

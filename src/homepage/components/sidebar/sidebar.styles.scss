@@ -1,22 +1,21 @@
+@import '../../variables.styles.scss';
+
 .homepage > .sidebar {
   width: 25%;
   text-align: left;
-  background-color: rgba(145, 13, 13, 0.8);
+  background-color: $theme-color;
   color: white;
 
   /* flexbox */
   display: flex;
   flex-direction: column;
 
-  .sidebar-link {
-    cursor: pointer;
-  }
+
 
   /* List */
   ul {
     list-style: none;
     padding: 0;
-
     li {
       opacity: 0.7;
       transition: 0.2s;
