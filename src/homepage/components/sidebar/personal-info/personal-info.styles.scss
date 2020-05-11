@@ -1,0 +1,19 @@
+.homepage > .sidebar .personal-info {
+  font-size: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  h1,
+  h2 {
+    margin-bottom: 0px;
+  }
+}
