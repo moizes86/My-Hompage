@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import './list-item-link.styles.scss';
 
 const ListItemLink = ({ section, history, match }) => {
-  console.log(match);
   return (
     <li
       onClick={() => history.push(`${match.path}/${section}`)}

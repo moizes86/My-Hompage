@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
+
 import ListItemLink from '../../list-item-link/list-item-link.component';
 
 import './introduction.styles.scss';
 
-const Introduction = (props) => {
+const Introduction = ({sections}) => {
   return (
     <div className='introduction'>
       <div className='center'>
@@ -12,12 +14,16 @@ const Introduction = (props) => {
         <h2>a junior web developer looking for an entry position.</h2>
       </div>
       <ul className='bottom'>
-        <ListItemLink section='portfolio' />
-        <ListItemLink section='cv' />
-        <ListItemLink section='contact' />
+      {
+        sections.map((section, idx)=> <ListItemLink key={idx} section={section} />)
+      }
       </ul>
     </div>
   );
 };
 
-export default Introduction;
+const mapStateToProps = state => {
+  return state;
+}
+
+export default connect(mapStateToProps)(Introduction);

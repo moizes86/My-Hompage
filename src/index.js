@@ -8,6 +8,7 @@ import AppTMDB from './tmdb-movies-search/src/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import tmdbStore from './tmdb-movies-search/src/redux/store';
+import homepageStore from './homepage/redux/store';
 
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
@@ -19,8 +20,10 @@ ReactDOM.render(
     <Route exact path='/' >
     <Redirect to='homepage' />
     </Route>
-
+    
+    <Provider store={homepageStore}>
     <Route path='/homepage' component={AppHomepage} />
+    </Provider>
 
     <Route path='/a' exact>
       <Provider store={tmdbStore}>

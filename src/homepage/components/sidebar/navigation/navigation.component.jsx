@@ -1,41 +1,27 @@
 import React from 'react';
-import ListItemLink from '../../list-item-link/list-item-link.component';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import ListItemLink from '../../list-item-link/list-item-link.component';
 
 import './navigation.styles.scss';
 
+const Navigation = ({ sections, history, match }) => {
+  // const sectionsArr = ['portfolio', 'cv', 'contact'];
 
-const Navigation = ({ history, match }) => {
   return (
     <div className='navigation'>
       <ul>
-      <ListItemLink section='portfolio' className='sidebar-link'/>
-      <ListItemLink section='cv' className='sidebar-link'/>
-      <ListItemLink section='contact' className='sidebar-link'/>
-
-        
-          {/*
-            </ul><li className='sidebar-link'
-          onClick={() => history.push(`${match.url}/portfolio`)}
-        >
-          PORTFOLIO
-        </li>
-        <li
-          className='sidebar-link'
-          onClick={() => history.push(`${match.url}/cv`)}
-        >
-          MY CV
-        </li>
-        <li
-          className='sidebar-link'
-          onClick={() => history.push(`${match.url}/contact`)}
-        >
-          CONTACT ME
-        </li>
-          **/}
+        {sections.map((section, idx) => (
+          <ListItemLink key={idx} section={section} className={`${match}`} />
+        ))}
       </ul>
     </div>
   );
 };
 
-export default withRouter(Navigation);
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default withRouter(connect(mapStateToProps)(Navigation));
