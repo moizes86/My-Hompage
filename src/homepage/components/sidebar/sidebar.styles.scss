@@ -18,11 +18,16 @@
     padding: 0;
     li {
       opacity: 0.7;
-      transition: 0.2s;
+      // transition: 0.2s;
+    }
+
+    .active{
+      opacity: 1;
+      font-weight: 300;
     }
 
     li:hover {
-      opacity: 1;
+      opacity: 0.85;
       top: 1px;
     }
   }

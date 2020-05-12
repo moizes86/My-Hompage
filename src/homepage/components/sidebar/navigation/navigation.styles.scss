@@ -11,7 +11,7 @@
       padding: 3px 30px;
     }
 
-    li:hover:after {
+    .active::after {
       content: '';
       display: block;
       position: absolute;
@@ -20,15 +20,16 @@
       border-top: 9px solid transparent;
       border-bottom: 9px solid transparent;
       border-right: 8px solid #fff;
-      bottom: 10px;
+      bottom: 5px;
       left: auto;
       right: 0;
     }
 
-    li a:hover:after {
-      content: ' \f105 ';
-      padding-left: 3px;
-      font-family: FontAwesome;
-    }
+    // li:hover:after {
+    //   float: left;
+    //   content: ' \f105 ';
+    //   padding-left: 3px;
+    //   font-family: FontAwesome;
+    // }
   }
 }

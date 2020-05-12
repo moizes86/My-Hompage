@@ -10,15 +10,20 @@ import ContactMe from './contact-me/contact-me.component';
 
 import './content.styles.scss';
 
-const Content = ({match}) => {
+const Content = ({ match }) => {
+  const componentsArr = [
+    { name: Introduction, route: '' },
+    { name: Portfolio, route: 'portfolio' },
+    { name: MyCV, route: 'cv' },
+    { name: ContactMe, route: 'contact' },
+  ];
+
   return (
     <div className='content'>
-        <Route exact path={`${match.url}`} component={Introduction} />
-        <Route exact path={`${match.url}/portfolio`} component={Portfolio} />
-        <Route exact path={`${match.url}/cv`} component={MyCV} />
-        <Route exact path={`${match.url}/contact`} component={ContactMe} />
-      </div>
+      {componentsArr.map((component, idx) => (
+        <Route exact path={`${match.url}/${component.route}`} key={idx} component={component.name} />
+      ))}
+    </div>
   );
 };
-
 export default withRouter(Content);

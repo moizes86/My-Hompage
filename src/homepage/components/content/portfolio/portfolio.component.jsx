@@ -1,7 +1,10 @@
 import React from 'react';
+
+import { withRouter } from 'react-router-dom';
+
 import './portfolio.styles.scss';
 
-const Portfolio = () => {
+const Portfolio = (props) => {
     return(
         <div className="portfolio">
         PORTFOLIO!!!
@@ -9,4 +12,4 @@ const Portfolio = () => {
     )
 };
 
-export default Portfolio;
+export default withRouter(Portfolio);

@@ -6,15 +6,28 @@ import ListItemLink from '../../list-item-link/list-item-link.component';
 
 import './navigation.styles.scss';
 
-const Navigation = ({ sections, history, match }) => {
-  // const sectionsArr = ['portfolio', 'cv', 'contact'];
+const Navigation = ({ match, location, sections }) => {
+  // console.log(props);
 
   return (
     <div className='navigation'>
       <ul>
         {sections.map((section, idx) => (
-          <ListItemLink key={idx} section={section} className={`${match}`} />
+          <ListItemLink
+            key={idx}
+            section={section}
+            active={
+              `${match.path}/${section}` === location.pathname
+                ? true
+                : false
+            }
+          />
         ))}
+        {/**
+            {console.log(`${match.path}/${sections[0]}` === location.pathname)}
+            {console.log(location.pathname)}
+          
+          */}
       </ul>
     </div>
   );
