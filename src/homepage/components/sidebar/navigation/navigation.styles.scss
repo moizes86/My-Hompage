@@ -9,9 +9,20 @@
     li {
       position: relative;
       padding: 3px 30px;
+      display: flex;
+
+      li:hover {
+        top: 1px;
+      }
+
+      li:hover:after {
+        content: '\f105';
+        padding-left: 13px;
+        font-family: FontAwesome;
+      }
     }
 
-    .active::after {
+    .active:after {
       content: '';
       display: block;
       position: absolute;
@@ -24,12 +35,5 @@
       left: auto;
       right: 0;
     }
-
-    // li:hover:after {
-    //   float: left;
-    //   content: ' \f105 ';
-    //   padding-left: 3px;
-    //   font-family: FontAwesome;
-    // }
   }
 }

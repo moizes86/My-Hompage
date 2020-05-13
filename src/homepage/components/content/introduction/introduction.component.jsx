@@ -6,7 +6,7 @@ import ListItemLink from '../../list-item-link/list-item-link.component';
 
 import './introduction.styles.scss';
 
-const Introduction = ({sections}) => {
+const Introduction = ({sectionsLinks}) => {
   return (
     <div className='introduction'>
       <div className='center'>
@@ -15,7 +15,7 @@ const Introduction = ({sections}) => {
       </div>
       <ul className='bottom'>
       {
-        sections.map((section, idx)=> <ListItemLink key={idx} section={section} />)
+        sectionsLinks.map((section, idx)=> <ListItemLink key={idx} section={section} />)
       }
       </ul>
     </div>

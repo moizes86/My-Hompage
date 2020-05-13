@@ -1,5 +1,11 @@
-.homepage > .content{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
+@import '../../variables.styles.scss';
+.homepage > .content {
+  min-height: 100vh;
+  display: flex;
+  flex-basis: 100%;
+}
+
+.homepage .content-background-color {
+  background-color: $content-background-color;
+  flex-basis: 100%;
 }

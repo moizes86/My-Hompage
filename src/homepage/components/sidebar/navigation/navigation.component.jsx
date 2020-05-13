@@ -6,13 +6,13 @@ import ListItemLink from '../../list-item-link/list-item-link.component';
 
 import './navigation.styles.scss';
 
-const Navigation = ({ match, location, sections }) => {
+const Navigation = ({ match, location, sectionsLinks }) => {
   // console.log(props);
 
   return (
     <div className='navigation'>
       <ul>
-        {sections.map((section, idx) => (
+        {sectionsLinks.map((section, idx) => (
           <ListItemLink
             key={idx}
             section={section}
