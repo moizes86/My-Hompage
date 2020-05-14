@@ -16,7 +16,7 @@ const MyCV = () => {
       <div className='content-cv'>
         <div className='download'>
           <a href='../../../assets/CV- Moshe Mantsur-May20.pdf' download>
-            Download PDF
+            Download Full Version PDF
           </a>
         </div>
         <div className='topic'>
@@ -83,7 +83,7 @@ const MyCV = () => {
         </div>
         <div className='download'>
           <a href='../../../assets/CV- Moshe Mantsur-May20.pdf' download>
-            Download PDF
+            Download Full Version PDF
           </a>
         </div>
       </div>

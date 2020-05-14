@@ -1,0 +1,25 @@
+.project-container {
+  background-color: blue;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+
+  .project-container-preview {
+    background-color: blueviolet;
+    flex: 1 auto 50%;
+  }
+
+  .project-container-details {
+    background-color: cornflowerblue;
+    flex-basis: 50%;
+    margin-left: 20px;
+    padding: 0 20px;
+
+    h1{
+        font-size: 1.4rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+  }
+}
