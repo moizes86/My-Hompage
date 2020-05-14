@@ -7,14 +7,13 @@ import GetInTouch from './get-in-touch/get-in-touch.component';
 import './sidebar.styles.scss';
 
 const Sidebar = () => {
-    return(
-        <div className="sidebar">
-        <PersonalInfo/>
-       <Navigation />
-        <GetInTouch />
-      </div>
- 
-    )
-}
+  return (
+    <div className='sidebar'>
+      <PersonalInfo />
+      <Navigation />
+      <GetInTouch />
+    </div>
+  );
+};
 
 export default Sidebar;

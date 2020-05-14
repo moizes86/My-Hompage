@@ -1,0 +1,53 @@
+.content-cv {
+  width: 60%;
+
+  .download {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    a {
+      color: white;
+      background-color: #007bff;
+      padding: 10px 25px;
+      border-radius: 5px;
+      transition: 0.2s;
+    }
+
+    a:hover{
+      box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+    }
+  }
+  .topic {
+    padding: 5px 30px;
+
+    h1 {
+      font-size: 1.3rem;
+      color: darkblue;
+      border-bottom: 1px solid darkblue;
+      line-height: 1.5;
+    }
+
+    
+
+  }
+
+  .topic-skills ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+      flex-basis: 25%;
+      padding: 10px;
+
+      .icon-svg {
+        width: 80px;
+        height: 50px;
+      }
+    }
+  }
+  .topic-list ul li{
+    list-style: circle;;
+  }
+}

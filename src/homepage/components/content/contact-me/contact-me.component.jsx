@@ -5,11 +5,11 @@ import IconLink from '../../icon-link/icon-link.component';
 
 import './contact-me.styles.scss';
 
-// className "content-background-color" is in content.styles.scss
+// className "content-default" is in content.styles.scss
 
 const ContactMe = ({ contacts }) => {
   return (
-    <div className='contact-me content-background-color'>
+    <div className='contact-me content-default'>
       <h1> CONTACT ME</h1>
       <h3>Available For Hire And Cooperation :) </h3>
       <ul>

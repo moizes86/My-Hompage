@@ -5,7 +5,8 @@
   flex-basis: 100%;
 }
 
-.homepage .content-background-color {
+.homepage .content-default{
   background-color: $content-background-color;
   flex-basis: 100%;
+  padding: 25px 50px;
 }

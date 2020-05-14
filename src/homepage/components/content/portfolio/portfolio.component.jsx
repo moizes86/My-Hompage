@@ -4,11 +4,11 @@ import { withRouter } from 'react-router-dom';
 
 import './portfolio.styles.scss';
 
-// className "content-background-color" is in content.styles.scss
+// className "content-default" is in content.styles.scss
 
 const Portfolio = (props) => {
     return(
-        <div className="content-background-color">
+        <div className="content-default">
         PORTFOLIO!!!
         </div>
     )
