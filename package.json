@@ -14,9 +14,11 @@
     "autocomplete-js": "^2.7.1",
     "autosuggest-highlight": "^3.1.1",
     "axios": "^0.19.2",
+    "cross-env": "^6.0.3",
     "numeral": "^2.0.6",
     "react": "^16.13.0",
     "react-autosuggest": "^9.4.3",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.0",
     "react-loader-spinner": "^3.1.5",
     "react-modal": "^3.11.2",
@@ -30,6 +32,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "sass": "^1.26.2",
+    "simple-react-lightbox": "^2.0.5",
     "styled-components": "^5.0.1"
   },
   "scripts": {

@@ -4,8 +4,7 @@ import { withRouter } from 'react-router-dom';
 import myPhoto from '../../../assets/my-photo.jpg';
 import './personal-info.styles.scss';
 
-const PersonalInfo = ({ history, match }) => {
-  // console.log(props);
+const PersonalInfo = ({ history }) => {
   return (
     <div className='personal-info'>
       <div onClick={() => history.push(`/`)}>

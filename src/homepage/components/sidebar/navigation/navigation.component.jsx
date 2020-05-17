@@ -7,7 +7,6 @@ import ListItemLink from '../../list-item-link/list-item-link.component';
 import './navigation.styles.scss';
 
 const Navigation = ({ match, location, sectionsLinks }) => {
-  // console.log(props);
 
   return (
     <div className='navigation'>
@@ -17,17 +16,10 @@ const Navigation = ({ match, location, sectionsLinks }) => {
             key={idx}
             section={section}
             active={
-              `${match.path}/${section}` === location.pathname
-                ? true
-                : false
+              `${match.path}/${section}` === location.pathname ? true : false
             }
           />
         ))}
-        {/**
-            {console.log(`${match.path}/${sections[0]}` === location.pathname)}
-            {console.log(location.pathname)}
-          
-          */}
       </ul>
     </div>
   );

@@ -5,6 +5,8 @@ import './index.css';
 import AppHomepage from './homepage/App';
 import AppTMDB from './tmdb-movies-search/src/App';
 
+import TKReact from './Teimanei-Kineret-React/src/App';
+
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import tmdbStore from './tmdb-movies-search/src/redux/store';
@@ -31,6 +33,9 @@ ReactDOM.render(
           <AppTMDB />
         </ThemeProvider>
       </Provider>
+    </Route>
+    <Route path='/b' >
+      <TKReact />
     </Route>
   </BrowserRouter>,
   document.getElementById('root')
