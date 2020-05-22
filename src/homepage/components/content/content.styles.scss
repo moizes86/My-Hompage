@@ -1,12 +1,12 @@
 @import '../../variables.styles.scss';
 .homepage > .content {
-  min-height: 100vh;
-  display: flex;
-  flex-basis: 100%;
+  width: 100%;
+  margin-left: 25%;
 }
 
-.homepage .content-default{
+.homepage .content-default {
   background-color: $content-background-color;
-  flex-basis: 100%;
+
+  min-height: 101vh;
   padding: 25px 50px;
 }

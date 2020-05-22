@@ -10,7 +10,7 @@ const PersonalInfo = ({ history }) => {
       <div onClick={() => history.push(`/`)}>
         <img src={myPhoto} alt='' />
         <h1>MOSHE MANTSUR</h1>
-        <h2>JUNIOR FRONT-END DEVELOPER</h2>
+        <h2>FRONT-END DEVELOPER</h2>
       </div>
     </div>
   );

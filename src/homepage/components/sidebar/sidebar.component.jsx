@@ -9,10 +9,10 @@ import './sidebar.styles.scss';
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-      <PersonalInfo />
-      <Navigation />
-      <GetInTouch />
-    </div>
+        <PersonalInfo />
+        <Navigation />
+        <GetInTouch />
+      </div>
   );
 };
 

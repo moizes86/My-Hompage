@@ -46,12 +46,13 @@ const projectsArr = [
 
 ]
 
-const Portfolio = (props) => {
+const Portfolio = () => {
     return(
         <div className="content-default">
-        {projectsArr.map((project, idx) => <Project key={idx} project={project} />)}
+        {projectsArr.map((project, idx) => <Project key={idx} project={project}/>)}
         </div>
     )
 };
+
 
 export default (Portfolio);

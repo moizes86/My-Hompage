@@ -1,0 +1,331 @@
+.mountain-travel {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #555;
+    --font-color: white;
+}
+
+section {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+section hr {
+    width: 150px;
+    height: 1px;
+    background-color: #2196F3;
+    margin: 40px 0;
+}
+
+section p {
+    line-height: 2;
+}
+
+/********************* HOME SCREEN ********************/
+
+.home-screen {
+    height: 100vh;
+    color: var(--font-color);
+    background-image: url('./img/hero.jpg');
+    background-size: cover;
+    opacity: 0.9;
+    padding: 0;
+}
+
+.home-screen::before {
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #252020;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.home-screen nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.home-screen nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 40px;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInFromTop 0.5s 0.5s ease-out forwards;
+}
+
+.home-screen nav ul .li-items {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.home-screen nav ul li {
+    flex-basis: 70px;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.home-screen nav ul li:hover {
+    opacity: 0.8;
+    text-shadow: 0 0 1px 2px gray;
+}
+
+.home-screen nav ul .hamburger {
+    display: none;
+}
+
+.home-screen nav ul .hamburger div {
+    border-bottom: 4px solid white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 640px) {
+    .home-screen nav ul {
+        justify-content: space-between;
+    }
+    .home-screen nav ul .hamburger {
+        display: block;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .home-screen nav ul .li-items {
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        top: -50vh;
+        padding-top: 65px;
+        padding-bottom: 40px;
+        background-color: rgba(0, 0, 0, 0.95);
+        display: flex;
+        flex-direction: column;
+
+        /* transform: translateY(-50vh); */
+        transition: 0.35s;
+        z-index: -1;
+    }
+    .home-screen nav ul .li-items.show {
+
+        transform: translateY(50vh);
+    }
+
+    .home-screen nav ul .li-items li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+/* @keyframes menuDropDown {
+    0%{
+        transform: translateY(0);
+    }
+100%{
+    transform: translateY(60vh) forwards;
+}
+
+ } */
+
+@keyframes fadeInFromTop {
+    0% {
+        transform: translateY(-25%);
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 500px) {}
+
+.home-screen .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    opacity: 0;
+    animation: fadeInFromBottom 0.5s 1s forwards;
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        transform: translateY(5%);
+        /* opacity:0; */
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.home-screen .content h1 {
+    /* transition: 0.5s; */
+    font-size: 60px;
+    margin-bottom: 20px;
+    /* font-weight: 800; */
+}
+
+.home-screen .content h3 {
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.home-screen .content a {
+    margin-top: 20px;
+    color: var(--font-color);
+}
+
+.home-screen .content>a {
+    text-decoration: none;
+    background-color: #2196F3;
+    padding: 20px 50px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    /* transition: 0.4s; */
+}
+
+.home-screen .content>a:hover {
+    box-shadow: 0 3px 4px rgba(255, 255, 255, 0.123);
+    top: 2px;
+}
+
+.home-screen .content>a:active {
+    box-shadow: 0 0 rgb(255, 255, 255);
+    top: 5px;
+}
+
+/* ************  SOME OF OUR WORK ************ */
+
+.some-of-our-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.some-of-our-work>p {
+    padding: 0 20px;
+    font-family: sans-serif;
+    line-height: 2;
+}
+
+.some-of-our-work .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.some-of-our-work .img-container div {
+    display: flex;
+    flex: 1 1 30%;
+    border-radius: 3px;
+    margin: 20px;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 5px black;
+}
+
+@media (max-width: 1000px) {
+    .some-of-our-work .img-container div {
+        flex-basis: 100%;
+    }
+}
+
+.some-of-our-work .img-container div.large {
+    flex-grow: 5;
+}
+
+/* ************  Features And Services ************ */
+
+.features-and-services ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    width: 100%;
+}
+
+.features-and-services ul li {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 170px;
+}
+
+@media (max-width: 640px) {
+    .features-and-services ul li {
+        flex-basis: 100%;
+    }
+}
+
+.fa {
+    font-size: 50px;
+    color: #2196F3;
+}
+
+/* ************  Join Our Newsletters ************ */
+
+.join-our-newsletter .subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 18px;
+    /* width: 80%; */
+}
+
+.join-our-newsletter .subscribe button {
+    padding: 10px 40px;
+    background-color: #2196F3;
+    border: none;
+    color: var(--font-color);
+    font-weight: bold;
+    border-radius: 5px;
+    min-width: 30%;
+    margin: 10px;
+}
+
+.join-our-newsletter .subscribe input {
+    padding: 10px;
+    min-width: 55%;
+    margin: 10px;
+}
+
+.footer {
+    background-color: #414a4f;
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .fa {
+    margin: 5px;
+}

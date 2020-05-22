@@ -7,6 +7,8 @@ import AppTMDB from './tmdb-movies-search/src/App';
 
 import TKReact from './Teimanei-Kineret-React/src/App';
 
+import MountainTravel from './mountain-travel/index';
+
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import tmdbStore from './tmdb-movies-search/src/redux/store';
@@ -36,6 +38,9 @@ ReactDOM.render(
     </Route>
     <Route path='/b' >
       <TKReact />
+    </Route>
+    <Route path='/c' >
+      <MountainTravel />
     </Route>
   </BrowserRouter>,
   document.getElementById('root')

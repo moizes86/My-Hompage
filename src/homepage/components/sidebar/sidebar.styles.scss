@@ -1,14 +1,14 @@
 @import '../../variables.styles.scss';
 
 .homepage > .sidebar {
-  width: 30%;
-  text-align: left;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 2;
+  width: 25%;
   background-color: $theme-color;
   color: white;
-
-  display: flex;
-  flex-direction: column;
-
 
   /* List */
   ul {
@@ -16,7 +16,7 @@
     padding: 0;
     li {
       opacity: 0.7;
-      // transition: 0.2s;
+      transition: 0.2s;
     }
 
     .active{
@@ -25,7 +25,11 @@
     }
 
     li:hover {
-      // opacity: 0.85;
+      opacity: 1;
+    }
+
+    a{
+      color: white;
     }
   }
 }
