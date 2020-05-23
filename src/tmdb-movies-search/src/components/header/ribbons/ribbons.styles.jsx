@@ -31,17 +31,22 @@ export const Ribbon = styled.div`
 export const Text = styled.span`
   display: block;
   padding: 3px;
+  color: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  color: #fff;
   font: 0.6rem 'Lato', sans-serif;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   text-align: center;
   transition: 0.2s ;
 
+  & a {
+  color: white;
+  text-decoration:none;
+  }
+
   &:hover{
     cursor:pointer;
-    font-size: 0.65rem;
+    font-size: 0.55rem;
     text-shadow:2px 2px 2px ${props=> props.theme.fancyFontColor}
   }
 `;

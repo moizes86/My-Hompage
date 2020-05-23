@@ -29,17 +29,17 @@ ReactDOM.render(
     <Route path='/homepage' component={AppHomepage} />
     </Provider>
 
-    <Route path='/a' exact>
+    <Route path='/tmdb'>
       <Provider store={tmdbStore}>
         <ThemeProvider theme={tmdbTheme}>
           <AppTMDB />
         </ThemeProvider>
       </Provider>
     </Route>
-    <Route path='/b' >
+    <Route path='/tk-react' >
       <TKReact />
     </Route>
-    <Route path='/c' >
+    <Route path='/mountain-travel' >
       <MountainTravel />
     </Route>
   </BrowserRouter>,

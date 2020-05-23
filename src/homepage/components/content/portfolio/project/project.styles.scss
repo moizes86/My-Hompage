@@ -14,11 +14,14 @@
     h1 {
       font-size: 1.4rem;
       font-weight: bold;
+      &:hover{
+        opacity: 0.8;
+      }
     }
     h2 {
       font-size: 1.2rem;
     }
-    p{
+    &>p{
       color:#6f6985;
     }
   }

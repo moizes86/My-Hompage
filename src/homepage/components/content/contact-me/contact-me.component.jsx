@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import IconLink from '../../icon-link/icon-link.component';
+import LinkExternal from '../../link-external/link-external.component';
 
 import './contact-me.styles.scss';
 
@@ -14,13 +14,15 @@ const ContactMe = ({ contacts }) => {
       <h3>Available For Hire And Cooperation :) </h3>
       <ul>
         {contacts.map((contact, idx) => (
-          <IconLink
-            key={idx}
-            type={contact.type}
-            href={contact.href}
-            icon={contact.icon}
-            username={contact.username}
-          />
+          <li>
+            <LinkExternal
+              key={idx}
+              type={contact.type}
+              href={contact.href}
+              icon={contact.icon}
+              text={contact.text}
+            />
+          </li>
         ))}
       </ul>
     </div>

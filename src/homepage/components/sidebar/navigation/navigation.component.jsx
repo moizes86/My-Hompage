@@ -2,19 +2,21 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import ListItemLink from '../../list-item-link/list-item-link.component';
+import LinkInternal from '../../link-internal/link-internal.component';
 
 import './navigation.styles.scss';
 
-const Navigation = ({ match, location, sectionsLinks }) => {
+const Navigation = ({ match, location, homepageSections }) => {
 
   return (
     <div className='navigation'>
       <ul>
-        {sectionsLinks.map((section, idx) => (
-          <ListItemLink
+        {homepageSections.map((section, idx) => (
+          <LinkInternal
             key={idx}
             section={section}
+            text={section.toUpperCase()}
+            inHomepage={true}
             active={
               `${match.path}/${section}` === location.pathname ? true : false
             }

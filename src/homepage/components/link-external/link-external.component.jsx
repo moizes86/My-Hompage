@@ -1,16 +1,14 @@
 import React from 'react';
 
-const IconLink = ({ href, icon, type, username }) => {
+const LinkExternal = ({ href, icon, type, text }) => {
   return (
-    <li>
     
     <a href={href} target='_blank' rel='noreferrer noopener'>
     <p>{type ? `${type}:` : null} </p>
         <i className={icon}></i>
-        <p>{username}</p>
+        <p>{text}</p>
       </a>
-    </li>
   );
 };
 
-export default IconLink;
+export default LinkExternal;
