@@ -11,8 +11,8 @@ const GetInTouch = ({ contacts }) => {
     <div className='get-in-touch'>
       <ul>
         {contacts.map((contact, idx) => (
-          <li>
-            <LinkExternal key={idx} href={contact.href} icon={contact.icon} />
+          <li key={idx}>
+            <LinkExternal  href={contact.href} icon={contact.icon} />
           </li>
         ))}
       </ul>

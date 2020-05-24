@@ -3,7 +3,23 @@ import styled from 'styled-components';
 export const PreviewContainer = styled.div`
   background-image: url(${(props) => props.thumbnail});
   background-size: 100% 100%;
-  width: 50%;
+  min-width: 50%;
+  min-height: 200px;
+
+  @media screen and (max-width: 1000px) {
+    margin: 0 20%;
+    min-width: 60%;
+    min-height:250px;
+    height:auto;
+
+    li, a , p{
+      display:none;
+    }
+  }
+
+  @media screen and (max-width: 800px){
+    margin: 0 5%;
+  }
 
   & li {
     padding: 5px;
@@ -12,13 +28,14 @@ export const PreviewContainer = styled.div`
     margin: 0;
   }
   & li,
-  a , p{
+  a,
+  p {
     text-align: center;
     transition: 0.1s;
 
     &:hover {
       text-decoration: none;
-      opacity:0.8;
+      opacity: 0.8;
     }
   }
 `;
@@ -34,5 +51,8 @@ export const Preview = styled.img`
   &:hover {
     opacity: 1;
     background-image: url(${(props) => props.gif});
+  }
+
+  @media screen and (max-width: 1000px) {
   }
 `;

@@ -49,7 +49,7 @@ const AppTMDB = (props) => {
         <FixedBackgroundGradient>
           <GlobalFonts />
           <AppPadding>
-            <MyModal />
+          <MyModal />
             <Header />
             <MovieContainer />
             <Footer />

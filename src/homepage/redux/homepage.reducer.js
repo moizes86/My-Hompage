@@ -1,4 +1,5 @@
-// import HomepageTypes from './homepage.types';
+import HomepageTypes from './homepage.types';
+
 import TK_Gif from '../assets/preview-gifs/tk.gif';
 import TK_Thumbnail from '../assets/preview-thumbnails/tk.jpg';
 import TK_React_Gif from '../assets/preview-gifs/tk-react.gif';
@@ -73,18 +74,22 @@ const projectsArr = [
     linkURL: 'https://temanei-kineret.herokuapp.com/index'
   },
 ]
+
+
 const INITIAL_STATE = {
   homepageSections: ['portfolio', 'cv', 'contact'],
   contacts: contactsArr,
   projects: projectsArr,
+  navbarShown: false,
 };
 
 const homepageReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    // case HomepageTypes.WHATEVER:
-    //     return {
-    //         ...state
-    //     }
+    case HomepageTypes.TOGGLE_NAVBAR_DROPDOWN:
+        return {
+            ...state,
+          navbarShown: !state.navbarShown
+        }
 
     default:
       return state;

@@ -1,7 +1,7 @@
 .homepage > .sidebar .get-in-touch {
-  position: absolute;
-  top: 85vh;
-  left: 20px;
+  // position: absolute;
+  // top: 85vh;
+  // left: 20px;
   ul {
     display: flex;
     justify-content: center;
@@ -13,5 +13,11 @@
         color: white;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .homepage > .sidebar .get-in-touch{
+    position: initial;
   }
 }

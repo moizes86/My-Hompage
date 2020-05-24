@@ -12,7 +12,7 @@ import './portfolio.styles.scss';
 
 const Portfolio = ({projects}) => {
   return (
-    <div className='content-default'>
+    <div className='content-default portfolio'>
       {projects.map((project, idx) => (
         <Project key={idx} project={project} />
       ))}

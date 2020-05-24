@@ -1,6 +1,5 @@
-// import HomepageTypes from './homepage.types';
+import HomepageTypes from './homepage.types';
 
-// export const whatever = () => ({
-//     type: HomepageTypes.WHATEVER,
-//     payload: null 
-// })
+export const onToggleNavbarDropdown = () => ({
+    type: HomepageTypes.TOGGLE_NAVBAR_DROPDOWN,
+})

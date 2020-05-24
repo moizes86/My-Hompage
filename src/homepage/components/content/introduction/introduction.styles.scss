@@ -10,6 +10,7 @@
   .bottom {
     margin-top: 100px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
   .bottom li {
@@ -30,5 +31,18 @@
     color: white;
     border-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 5px 0px black;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .homepage > .content .introduction {
+    padding: 10px 40px;
+
+    .bottom {
+      padding: 0 10px;
+      li{
+        margin: 10px 10px;
+      }
+    }
   }
 }

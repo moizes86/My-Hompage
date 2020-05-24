@@ -1,14 +1,17 @@
-.contact-me ul {
-  padding: 0;
-  align-items: center;
+.contact-me {
+padding: 0 25px;
+  ul {
+    padding: 0;
+    align-items: center;
 
-  li a {
-    display: flex;
-    color: rgb(73, 80, 87);
+    li a {
+      display: flex;
+      color: rgb(73, 80, 87);
 
-    i {
-      padding: 0 6px;
-      font-size: 20px;
+      i {
+        padding: 0 6px;
+        font-size: 20px;
+      }
     }
   }
 }

@@ -1,9 +1,6 @@
+@import '../../../variables.styles.scss';
+
 .homepage > .sidebar .navigation {
-  // flex-grow: 1;
-  margin: 0;
-  margin-top: 20%;
-  width: 100%;
-  text-align: left;
 
   ul {
     li {
@@ -34,6 +31,50 @@
       bottom: 5px;
       left: auto;
       right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .homepage > .sidebar {
+    .navigation {
+      visibility: hidden;
+      transition: 0.1s;
+
+      ul {
+        width: 0;
+        opacity: 0;
+      }
+      ul li.active:after {
+        display: none;
+      }
+    }
+
+    .navigation.show {
+      visibility: visible;
+
+      ul {
+        opacity: 1;
+        padding: 25px 0;
+        width: 100%;
+        right: 0;
+        top: 50px;
+        position: absolute;
+        background-color: $theme-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+          font-size: 1.5rem;
+          opacity: 0.85;
+        }
+
+        li.active {
+          font-weight: bold;
+          opacity: 1;
+        }
+      }
     }
   }
 }

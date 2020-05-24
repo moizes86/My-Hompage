@@ -9,22 +9,23 @@ import './contact-me.styles.scss';
 
 const ContactMe = ({ contacts }) => {
   return (
-    <div className='contact-me content-default'>
-      <h1> CONTACT ME</h1>
-      <h3>Available For Hire And Cooperation :) </h3>
-      <ul>
-        {contacts.map((contact, idx) => (
-          <li>
-            <LinkExternal
-              key={idx}
-              type={contact.type}
-              href={contact.href}
-              icon={contact.icon}
-              text={contact.text}
-            />
-          </li>
-        ))}
-      </ul>
+    <div className='content-default'>
+      <div className='contact-me'>
+        <h1> CONTACT ME</h1>
+        <h3>Available For Hire And Cooperation :) </h3>
+        <ul>
+          {contacts.map((contact, idx) => (
+            <li key={idx}>
+              <LinkExternal
+                type={contact.type}
+                href={contact.href}
+                icon={contact.icon}
+                text={contact.text}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

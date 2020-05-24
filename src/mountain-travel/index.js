@@ -44,13 +44,7 @@ const MountainTravel = () => {
           <h1>My Cool Website</h1>
           <h3>
             Just a template for practicing flexbox and some styling
-            <a
-              href='https://demo.tutorialzine.com/2016/06/freebie-landing-page-template-with-flexbox/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
-              here
-            </a>
+        
           </h3>
 
           <a
@@ -58,7 +52,7 @@ const MountainTravel = () => {
             target='_blank'
             rel='noreferrer noopener'
           >
-            DOWNLOAD IT HERE
+            ORIGINAL HERE
           </a>
         </div>
       </section>

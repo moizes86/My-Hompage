@@ -109,39 +109,25 @@ section p {
         position: absolute;
         width: 100vw;
         left: 0;
-        top: -50vh;
+        top: -340px;
         padding-top: 65px;
         padding-bottom: 40px;
         background-color: rgba(0, 0, 0, 0.95);
         display: flex;
         flex-direction: column;
-
-        /* transform: translateY(-50vh); */
         transition: 0.35s;
         z-index: -1;
     }
     .home-screen nav ul .li-items.show {
-
-        transform: translateY(50vh);
+        transform: translateY(340px);
     }
-
-    .home-screen nav ul .li-items li{
+    .home-screen nav ul .li-items li {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 }
 
-/* @keyframes menuDropDown {
-    0%{
-        transform: translateY(0);
-    }
-100%{
-    transform: translateY(60vh) forwards;
-}
-
- } */
 
 @keyframes fadeInFromTop {
     0% {
