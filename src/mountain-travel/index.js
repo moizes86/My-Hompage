@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+
+import ButtonHome from '../components/button-home/button-home.component';
 
 import img_balloon from './img/balloon.jpg';
 import img_island from './img/island.jpg';
 import img_mountain from './img/mountain.jpg';
 import img_coast from './img/coast.jpg';
 import './styles.css';
-
 
 // function toggleNavbar() {
 //     let responsiveMenu = document.querySelector('.li-items').classNameList;
@@ -15,25 +16,28 @@ import './styles.css';
 //   //     : responsiveMenu.add('show');
 //   }
 
-  
 const MountainTravel = () => {
-    const [navbarShown, setNavbarShown] = useState(false);
+  const [navbarShown, setNavbarShown] = useState(false);
 
   return (
     <div className='mountain-travel'>
       <section className='home-screen'>
+        <ButtonHome />
         <nav>
           <ul>
             <div className='website-logo'>
               <li>Website Logo</li>
             </div>
-            <div className={`li-items ${navbarShown? 'show' : ''}`}>
+            <div className={`li-items ${navbarShown ? 'show' : ''}`}>
               <li>Home</li>
               <li>Products</li>
               <li>About</li>
               <li>Contact</li>
             </div>
-            <div className='hamburger' onClick={()=>setNavbarShown(!navbarShown)}>
+            <div
+              className='hamburger'
+              onClick={() => setNavbarShown(!navbarShown)}
+            >
               <div></div>
               <div></div>
               <div></div>
@@ -42,10 +46,7 @@ const MountainTravel = () => {
         </nav>
         <div className='content'>
           <h1>My Cool Website</h1>
-          <h3>
-            Just a template for practicing flexbox and some styling
-        
-          </h3>
+          <h3>Just a template for practicing flexbox and some styling</h3>
 
           <a
             href='https://tutorialzine.com/2016/06/freebie-landing-page-template-with-flexbox'
@@ -66,7 +67,7 @@ const MountainTravel = () => {
         </p>
         <hr />
         <div className='img-container'>
-          <div style={{backgroundImage: `url(${img_balloon})`}}></div>
+          <div style={{ backgroundImage: `url(${img_balloon})` }}></div>
           <div
             className='large'
             style={{ backgroundImage: `url(${img_island})` }}
@@ -75,9 +76,7 @@ const MountainTravel = () => {
             className='large'
             style={{ backgroundImage: `url(${img_mountain})` }}
           ></div>
-          <div
-            style={{ backgroundImage: `url(${img_coast})` }}
-          ></div>
+          <div style={{ backgroundImage: `url(${img_coast})` }}></div>
         </div>
       </section>
       <section className='features-and-services'>
@@ -118,9 +117,9 @@ const MountainTravel = () => {
       <section className='what-others-say'>
         <h1>What Others Say:</h1>
         <p>
-          Mauris sit amet mauris a arcu eleifend ultricies eget ut dolor. ClassName
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos.
+          Mauris sit amet mauris a arcu eleifend ultricies eget ut dolor.
+          ClassName aptent taciti sociosqu ad litora torquent per conubia
+          nostra, per inceptos himenaeos.
         </p>
         <p>— Patrick Farrell</p>
         <p>

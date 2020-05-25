@@ -22,7 +22,7 @@ import { ThemeProvider } from 'styled-components';
 ReactDOM.render(
   <BrowserRouter>
     <Route exact path='/' >
-    <Redirect to='homepage' />
+    <Redirect to='/homepage' />
     </Route>
     
     <Provider store={homepageStore}>

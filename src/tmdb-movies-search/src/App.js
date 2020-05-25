@@ -5,6 +5,8 @@ import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
 import MovieContainer from './components/movie-container/movie-container.component';
 import MyModal from './components/my-modal/my-modal.component';
+import ButtonHome from '../../components/button-home/button-home.component';
+
 import { connect } from 'react-redux';
 import { onFetchMovieAsync } from './redux/main-page/main-page.actions';
 
@@ -50,6 +52,7 @@ const AppTMDB = (props) => {
           <GlobalFonts />
           <AppPadding>
           <MyModal />
+          <ButtonHome />
             <Header />
             <MovieContainer />
             <Footer />
