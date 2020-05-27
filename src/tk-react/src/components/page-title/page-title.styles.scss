@@ -1,0 +1,15 @@
+@import "../../App.scss";
+
+.page-title{
+    h1 {
+        color: $headersMainColor;
+        font-family: $headersFontFamily;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+}

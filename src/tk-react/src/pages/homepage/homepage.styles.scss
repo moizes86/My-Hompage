@@ -1,0 +1,29 @@
+@import "../../App.scss";
+
+.main-content {
+
+    li{
+        list-style: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    background-color: white;
+    
+    h5{
+        background-color: $headersMainColor;
+        color: white;
+        font-family: $headersFontFamily;
+        letter-spacing: 0.2rem;
+    }
+
+    #kineret-sign {
+        font-family: Guttman Haim;
+        letter-spacing: 1px;
+        margin-block-end: 0;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+    
+}

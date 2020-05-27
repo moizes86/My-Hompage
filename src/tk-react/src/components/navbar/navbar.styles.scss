@@ -1,0 +1,53 @@
+@import "../../App.scss";
+
+.navbar {
+  background-color: #232323;
+  font-size: 1rem;
+  padding: 2px;
+  font-family: Tahoma, sans-serif;
+
+  .nav-item {
+    border-left: 1px solid rgba(158, 161, 85, 0.568);
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    transition: 0.3s;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      border-left: none;
+    }
+
+    li {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .nav-item:hover {
+    border-top: 1px solid rgba(255, 255, 255, 0.568);
+    opacity: 0.85;
+
+  }
+
+  #last-item {
+    border-left: none;
+  }
+
+  .navbar-brand {
+    li {
+      margin-left: 0.5rem;
+      color: white;
+      text-decoration: none;
+      list-style: none;
+    cursor: pointer;
+
+    }
+  }
+
+  .hamburgerIcon {
+    width: 28px;
+    height: 3.5px;
+    margin: 5px 0;
+    background-image: radial-gradient(#cca246ce, $headersMainColor);
+    border-radius: 2px;
+  }
+}

@@ -1,0 +1,26 @@
+$headersMainColor: #cca146;
+$headersFontFamily: 'Secular One', Tahoma, sans-serif;
+.App-TK-React {
+  text-align: right;
+  background-color: #f0f8ff;
+  color: #000099;
+  font-family: Tahoma;
+  direction: rtl;
+  text-align: justify;
+  height: 98.7%;
+
+  .ul-list-links li:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+  .page-container {
+    border: 1px solid rgb(197, 201, 105);
+    border-radius: 0.2rem;
+    overflow: hidden;
+  }
+
+  hr {
+    width: 25%;
+  }
+}
