@@ -19,7 +19,7 @@ const MyModal = ({ isOpen, contentClass, overlayClass, onToggleModal }) => {
       isOpen={isOpen}
       contentLabel={'About'}
       onRequestClose={onToggleModal}
-      closeTimeoutMS={500}
+      closeTimeoutMS={400}
     >
       {
         {

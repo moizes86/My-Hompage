@@ -13,7 +13,7 @@ import {
   ProductionList,
   ReleaseDetails,
   ReleaseDetailsBox,
-  FancyContent
+  FancyContent,
 } from './movie-container.styles';
 
 const MovieContainer = ({

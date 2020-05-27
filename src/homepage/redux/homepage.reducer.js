@@ -81,6 +81,7 @@ const INITIAL_STATE = {
   contacts: contactsArr,
   projects: projectsArr,
   navbarShown: false,
+  loading: true,
 };
 
 const homepageReducer = (state = INITIAL_STATE, action) => {
@@ -90,6 +91,12 @@ const homepageReducer = (state = INITIAL_STATE, action) => {
             ...state,
           navbarShown: !state.navbarShown
         }
+
+        case HomepageTypes.ON_MOUNTED:
+          return {
+            ...state,
+            loading: false
+          }
 
     default:
       return state;

@@ -8,7 +8,7 @@ import MyModal from './components/my-modal/my-modal.component';
 import ButtonHome from '../../components/button-home/button-home.component';
 
 import { connect } from 'react-redux';
-import { onFetchMovieAsync } from './redux/main-page/main-page.actions';
+import { onFetchMovieStartAsync } from './redux/main-page/main-page.actions';
 
 // * * * * STYLES * * * *//
 import {
@@ -20,7 +20,7 @@ import {
 import './index.css';
 
 // LOADER
-import { LoaderContainer } from './spinner.styles';
+import { LoaderContainer } from '../../components/loader/loader.styles';
 import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
@@ -28,17 +28,19 @@ import { CSSTransition } from 'react-transition-group';
 import './transitions.css';
 
 const AppTMDB = (props) => {
-
   //  ** ** ** **
   // SETTINGS
   const { mounted, isLoading, data } = props;
   const backgroundImg = {
     backgroundImage: `url(https://image.tmdb.org/t/p/w500${data.backdrop_path})`,
   };
+
+      
   useEffect(() => {
-    props.onFetchMovieAsync(data.movieID);
-  },[]);
-  
+    props.onFetchMovieStartAsync(data.id);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   //  ** ** ** **
   // RENDER
   return isLoading ? (
@@ -51,8 +53,8 @@ const AppTMDB = (props) => {
         <FixedBackgroundGradient>
           <GlobalFonts />
           <AppPadding>
-          <MyModal />
-          <ButtonHome />
+            <MyModal />
+            <ButtonHome />
             <Header />
             <MovieContainer />
             <Footer />
@@ -69,7 +71,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  onFetchMovieAsync: (movieID) => dispatch(onFetchMovieAsync(movieID)),
+  onFetchMovieStartAsync: (movieID) => dispatch(onFetchMovieStartAsync(movieID)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppTMDB);

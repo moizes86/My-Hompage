@@ -12,6 +12,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    animation: fadeIn 1.5s 0.5s forwards;
+    opacity:0;
+
+    @keyframes fadeIn {
+      0%{
+        opacity:0
+      }
+      100%{
+        opacity: 1;
+      }
+      
+    }
   }
   .bottom li {
     flex: 1 auto 100px;

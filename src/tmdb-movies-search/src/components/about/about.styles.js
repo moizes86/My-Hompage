@@ -17,13 +17,14 @@ const slideOut = keyframes`
         }
         to {
           transform: translateY(-100%);
-        //   opacity: 0;
+          opacity: 0;
         }
 `;
 
 export const AboutContainer = styled.div`
-  color: #616161;
-  font-family: 'Roboto Thin';
+  color: #202020;
+  /* font-family: 'Roboto Thin'; */
+  font-size: 1.9rem;
   position: absolute;
   top: 15%;
   left: 25%;
@@ -40,9 +41,9 @@ export const AboutContainer = styled.div`
   @media (max-width: 640px) {
     padding: 10px;
     top: 15%;
-  left: 5%;
-  right: 5%;
-  bottom: 15%;
+    left: 5%;
+    right: 5%;
+    bottom: 15%;
   }
 
   &.content-about--open {
@@ -51,8 +52,7 @@ export const AboutContainer = styled.div`
   }
 
   &.content-about--close {
-    animation-name: ${slideOut};
-    animation-duration: 0.5s;
+    animation: ${slideOut} 0.4s forwards;
   }
 `;
 
@@ -63,7 +63,6 @@ export const Header = styled.div`
   background-color: #00c851;
   text-align: center;
   padding: 15px 20px;
-  font-size: 1.5rem;
 
   @media (max-width: 640px) {
     padding-top: 20px;
@@ -74,12 +73,12 @@ export const Header = styled.div`
 export const Close = styled.div`
   float: right;
   font-weight: 800;
-  transition: 0.5s;
+  /* transition: 0.1s; */
 
   &:hover {
     cursor: pointer;
-    transform: rotate(180deg);
-    text-shadow: -2px -2px 2px rgba(0, 0, 0, 0.452);
+    /* transform: rotate(180deg); */
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.452);
   }
 `;
 
@@ -95,15 +94,13 @@ export const Title = styled.p`
 
 export const OL = styled.ol`
   padding-left: 20px;
-  font-size: 0.9rem;
-  &>li{
+  font-size: 1.1rem;
+  & > li {
     padding: 10px 0;
 
-    &>a {
-    color: blue;
-    font-weight: bold;
+    & > a {
+      color: blue;
+      font-weight: bold;
+    }
   }
-  }
-
-
 `;

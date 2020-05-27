@@ -6,19 +6,22 @@
     li {
       position: relative;
       padding: 3px 30px;
-      display: flex;
+      // display: flex;
 
-      li:hover {
-        top: 1px;
-      }
+      // li:hover {
+      //   top: 1px;
+      // }
 
-      li:hover:after {
-        content: '\f105';
-        padding-left: 13px;
-        font-family: FontAwesome;
-      }
+      // li:hover:after {
+      //   content: '\f105';
+      //   padding-left: 13px;
+      //   font-family: FontAwesome;
+      // }
     }
 
+     .active:nth-child(1):after{
+      display: none;
+    }
     .active:after {
       content: '';
       display: block;

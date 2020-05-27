@@ -21,12 +21,12 @@ import { ThemeProvider } from 'styled-components';
 
 ReactDOM.render(
   <BrowserRouter>
-    <Route exact path='/' >
-    <Redirect to='/homepage' />
+    <Route exact path='/'>
+      <Redirect to='/homepage' />
     </Route>
-    
+
     <Provider store={homepageStore}>
-    <Route path='/homepage' component={AppHomepage} />
+      <Route path='/homepage' component={AppHomepage} />
     </Provider>
 
     <Route path='/tmdb'>
@@ -36,10 +36,10 @@ ReactDOM.render(
         </ThemeProvider>
       </Provider>
     </Route>
-    <Route path='/tk-react' >
+    <Route path='/tk-react'>
       <TKReact />
     </Route>
-    <Route path='/mountain-travel' >
+    <Route path='/mountain-travel'>
       <MountainTravel />
     </Route>
   </BrowserRouter>,

@@ -3,8 +3,10 @@ import Autosuggest from 'react-autosuggest';
 import { connect } from 'react-redux';
 import { AutoSuggestContainerStyled } from './auto-suggest.styles';
 import ClearInputButton from '../../clear-input-button/clear-input-button.component';
+
+// LOADER
 import Loader from 'react-loader-spinner';
-import { LoaderContainer } from '../../../spinner.styles';
+import { LoaderContainer } from '../../../../../components/loader/loader.styles';
 
 import {
   updateInputValue,
@@ -13,7 +15,7 @@ import {
   onGetSuggestionValue,
 } from '../../../redux/auto-suggest/auto-suggest.actions';
 
-import { onFetchMovieAsync } from '../../../redux/main-page/main-page.actions';
+import { onFetchMovieStartAsync } from '../../../redux/main-page/main-page.actions';
 
 const AutoSuggestContainer = ({
   value,
@@ -88,7 +90,7 @@ const mapDispatchToProps = (dispatch) => ({
   onGetSuggestionValue: (suggestion) =>
     dispatch(onGetSuggestionValue(suggestion)),
   onSelected: (event, { suggestion }) => {
-    dispatch(onFetchMovieAsync(suggestion.id));
+    dispatch(onFetchMovieStartAsync(suggestion.id));
   },
 });
 

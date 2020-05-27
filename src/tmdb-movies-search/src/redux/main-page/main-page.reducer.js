@@ -3,8 +3,8 @@ import MainPageTypes from './main-page.types';
 const INITIAL_STATE = {
   mounted: true,
   isLoading: true,
-  data: {movieID: '9012'},
-  errorMessage: ''
+  data: { id: '107' },
+  errorMessage: '',
 };
 
 const mainPageReducer = (state = INITIAL_STATE, action) => {
@@ -12,23 +12,22 @@ const mainPageReducer = (state = INITIAL_STATE, action) => {
     case MainPageTypes.ON_FETCH_MOVIE_START:
       return {
         ...state,
-        isLoading: true
+        isLoading: true,
       };
 
     case MainPageTypes.ON_FETCH_MOVIE_SUCCESS:
       return {
         ...state,
         data: action.payload,
-        isLoading: false
+        isLoading: false,
       };
 
-      case MainPageTypes.ON_FETCH_MOVIE_FAILURE:
-        return {
-          ...state,
-          errorMessage: action.payload
-        }
-
-
+    case MainPageTypes.ON_FETCH_MOVIE_FAILURE:
+      return {
+        ...state,
+        errorMessage: action.payload,
+        isLoading: false
+      };
 
     default:
       return state;
