@@ -5,7 +5,7 @@ import './index.css';
 import AppHomepage from './homepage/App';
 import AppTMDB from './tmdb-movies-search/src/App';
 
-import TKReact from './Teimanei-Kineret-React/src/App';
+import TKReact from './tk-react/src/App';
 
 import MountainTravel from './mountain-travel/index';
 
