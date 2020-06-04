@@ -1,0 +1,50 @@
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    :target{
+      padding-top:65px;
+      margin-top: -65px;
+    }
+    
+    & > p {
+      padding: 0 20px;
+      font-family: sans-serif;
+      line-height: 2;
+    }
+  
+    .img-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+  
+      div {
+        display: flex;
+        flex: 1 1 33%;
+        border-radius: 3px;
+        margin: 20px;
+        height: 350px;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0 0 5px black;
+        transition: 0.2s;
+         &.large {
+          flex-grow: 3;
+        }
+
+        &:hover{
+          
+          cursor: pointer;
+          box-shadow: 0 0 3px 3px grey;
+      }
+
+        
+  
+        @media (max-width: 1000px) {
+          flex-basis: 100%;
+        }
+      }
+    }
+}

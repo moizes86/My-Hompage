@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { ReactComponent as SvgCSS } from '../../../assets/css.svg';
-import { ReactComponent as SvgHTML } from '../../../assets/html5.svg';
-import { ReactComponent as SvgJS } from '../../../assets/js.svg';
-import { ReactComponent as SvgNode } from '../../../assets/node.svg';
-import { ReactComponent as SvgReact } from '../../../assets/react.svg';
-import { ReactComponent as SvgBootstrap } from '../../../assets/bootstrap.svg';
+import { ReactComponent as SvgCSS } from '../../../assets/cv-skills-SVGs/css.svg';
+import { ReactComponent as SvgHTML } from '../../../assets/cv-skills-SVGs/html5.svg';
+import { ReactComponent as SvgJS } from '../../../assets/cv-skills-SVGs/js.svg';
+import { ReactComponent as SvgNPM } from '../../../assets/cv-skills-SVGs/Npm-logo.svg';
+import { ReactComponent as SvgReact } from '../../../assets/cv-skills-SVGs/react.svg';
+import { ReactComponent as SvgBootstrap } from '../../../assets/cv-skills-SVGs/bootstrap.svg';
 
 import './my-cv.styles.scss';
 
@@ -20,6 +20,8 @@ const MyCV = () => {
           </a>
         </div>
         <div className='topic'>
+        <h1>Summary</h1>
+        <p>Looking for my first job as a <b>front-end developer</b>. Main stack is Javascript and React. Learned independently via online courses. </p>
           <h1>Education</h1>
           <p>
             <b>2014: </b>
@@ -52,7 +54,7 @@ const MyCV = () => {
               <SvgJS className='icon-svg' />
             </li>
             <li>
-              <SvgNode className='icon-svg' />
+              <SvgNPM className='icon-svg' />
             </li>
             <li>
               <SvgReact className='icon-svg' />

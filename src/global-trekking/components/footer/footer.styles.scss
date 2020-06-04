@@ -1,0 +1,16 @@
+.footer {
+    
+    background-color: #414a4f;
+    color: white;
+    text-transform: uppercase;
+    .fa {
+      margin: 5px;
+      font-size: 2rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+}

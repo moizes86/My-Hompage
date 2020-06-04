@@ -55,12 +55,12 @@ const projectsArr = [
     linkURL: 'tk-react',
   },
   {
-    title: 'Mountain-Travel',
-    stack: 'HTML, CSS',
-    summary: 'Imitating a template for flexbox hands-on.',
+    title: 'Global-Trekking',
+    stack: 'React, Sass',
+    summary: 'Landing page for tours company.',
     gif: MountainTravel_Gif,
     thumbnail: MountainTravel_Thumbnail,
-    linkURL: 'mountain-travel',
+    linkURL: 'global-trekking',
   },
 
   {

@@ -2,14 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
+
+// Components
 import AppHomepage from './homepage/App';
 import AppTMDB from './tmdb-movies-search/src/App';
-
 import TKReact from './tk-react/src/App';
-
-import MountainTravel from './mountain-travel/index';
+import GlobalTrekking from './global-trekking/global-trekking-index';
+import ScrollToTop from './components/scroll-to-top/scroll-to-top.component';
 
 import * as serviceWorker from './serviceWorker';
+
+// Redux
 import { Provider } from 'react-redux';
 import tmdbStore from './tmdb-movies-search/src/redux/store';
 import homepageStore from './homepage/redux/store';
@@ -21,14 +24,19 @@ import { ThemeProvider } from 'styled-components';
 
 ReactDOM.render(
   <BrowserRouter>
+    <ScrollToTop />
+
+    {/* REDIRECT TO HOMEPAGE */}
     <Route exact path='/'>
       <Redirect to='/homepage' />
     </Route>
 
+    {/* HOMEPAGE */}
     <Provider store={homepageStore}>
       <Route path='/homepage' component={AppHomepage} />
     </Provider>
 
+    {/* TMDB */}
     <Route path='/tmdb'>
       <Provider store={tmdbStore}>
         <ThemeProvider theme={tmdbTheme}>
@@ -36,11 +44,15 @@ ReactDOM.render(
         </ThemeProvider>
       </Provider>
     </Route>
+
+    {/* TK-REACT */}
     <Route path='/tk-react'>
       <TKReact />
     </Route>
-    <Route path='/mountain-travel'>
-      <MountainTravel />
+
+    {/* GLOBAL-TREKKING */}
+    <Route path='/global-trekking'>
+      <GlobalTrekking />
     </Route>
   </BrowserRouter>,
   document.getElementById('root')

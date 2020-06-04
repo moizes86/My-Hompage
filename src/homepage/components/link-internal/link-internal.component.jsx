@@ -25,4 +25,3 @@ const Linkinternal = ({
 };
 
 export default withRouter(Linkinternal);
-// {section ? section.toUpperCase() : ''}

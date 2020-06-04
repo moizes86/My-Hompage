@@ -1,0 +1,42 @@
+.global-trekking {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: #555;
+  --font-color: white;
+  
+  a{
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      opacity: 0.8;
+      text-shadow: 0 0 1px 2px gray;
+    }
+  }
+  /********************* SECTION SETTINGS ********************/
+  .section {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: 640px) {
+      padding: 40px 10px;
+    }
+
+    &:nth-child(odd) {
+      background-color: #f7f7f7;
+    }
+
+    hr {
+      width: 150px;
+      height: 1px;
+      background-color: #2196f3;
+      margin: 40px 0;
+    }
+
+    p {
+      line-height: 2;
+    }
+  }
+}
