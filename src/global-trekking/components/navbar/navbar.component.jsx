@@ -10,7 +10,9 @@ const Navbar = ({ imgLogoURL }) => {
         <div className='website-logo'>
           <li>
             {' '}
+            <a href='#/'>
             <img src={imgLogoURL} alt='' />{' '}
+            </a>
           </li>
         </div>
         <div className={`li-items ${navbarShown ? 'show' : ''}`}>
