@@ -5,8 +5,8 @@ import TK_Thumbnail from '../assets/preview-thumbnails/tk.jpg';
 import TK_React_Gif from '../assets/preview-gifs/tk-react.gif';
 import TMDb_Gif from '../assets/preview-gifs/tmdb-movies-search.gif';
 import TMDb_Thumbnail from '../assets/preview-thumbnails/tmdb.PNG';
-import MountainTravel_Thumbnail from '../assets/preview-thumbnails/mountain-travel.PNG';
-import MountainTravel_Gif from '../assets/preview-gifs/mountain-travel.gif';
+import GlobalTrekking_Thumbnail from '../assets/preview-thumbnails/global-trekking.jpg';
+import GlobalTrekking_Gif from '../assets/preview-gifs/global-trekking.gif';
 
 const contactsArr = [
   {
@@ -58,8 +58,8 @@ const projectsArr = [
     title: 'Global-Trekking',
     stack: 'React, Sass',
     summary: 'Landing page for tours company.',
-    gif: MountainTravel_Gif,
-    thumbnail: MountainTravel_Thumbnail,
+    gif: GlobalTrekking_Gif,
+    thumbnail: GlobalTrekking_Thumbnail,
     linkURL: 'global-trekking',
   },
 

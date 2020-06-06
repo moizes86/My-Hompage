@@ -15,7 +15,7 @@ const MyCV = () => {
     <div className='content-default'>
       <div className='content-cv'>
         <div className='download'>
-          <a href='../../../assets/CV- Moshe Mantsur-May20.pdf' download>
+          <a href='/cv-mm-05-2020.pdf' download>
             Full Version (PDF)
           </a>
         </div>

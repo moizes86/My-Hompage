@@ -1,106 +1,107 @@
-.navbar-bckgrnd-show{
-  background-color: #228aa9f1;
-  transition: background-color 0.15s linear;
+.navbar-bckgrnd-show {
+  @media screen and (min-width: 940px) {
+    background-color: #228aa9f1;
+    transition: background-color 0.15s linear;
+  }
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;  
-    transition: background-color 0.15s linear;
-    background-color:   #228aa904;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  transition: background-color 0.15s linear;
+  background-color: #228aa904;
 
-   
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 20px 40px;
-      font-size: 16px;
-      opacity: 0;
-      animation: fadeInFromTop 0.1s ease-out forwards;
-      height: 70px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInFromTop 0.1s ease-out forwards;
+    height: 70px;
 
-      @keyframes fadeInFromTop {
-        0% {
-          transform: translateY(-25%);
-        }
-        100% {
-          transform: translateY(0%);
-          opacity: 1;
-        }
+    @keyframes fadeInFromTop {
+      0% {
+        transform: translateY(-25%);
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      justify-content: space-between;
+      background-color: #228aa9f1;
+      .show {
+        transform: translateY(340px);
+      }
+    }
+
+    li {
+      // flex-basis: 140px;
+      padding: 0 10px;
+      cursor: pointer;
+      transition: 0.2s;
+      list-style: none;
+    }
+
+    //   HAMBURGER
+    .hamburger {
+      display: none;
+      div {
+        border-bottom: 4px solid white;
+        border-radius: 10px;
       }
 
       @media screen and (max-width: 640px) {
+        display: block;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        background-color: black;
-        .show {
-          transform: translateY(340px);
-        }
       }
+    }
 
+    //  LOGO
+    .website-logo {
       li {
-        // flex-basis: 140px;
-        padding: 0 10px;
-        cursor: pointer;
-        transition: 0.2s;
-        list-style: none;
-      }
+        img {
+          margin-top: -10px;
+          height: 50px;
+          border-radius: 50%;
 
-      //   HAMBURGER
-      .hamburger {
-        display: none;
-        div {
-          border-bottom: 4px solid white;
-          border-radius: 10px;
-        }
-
-        @media screen and (max-width: 640px) {
-          display: block;
-          width: 30px;
-          height: 30px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-      }
-
-      //  LOGO
-      .website-logo {
-        li {
-          img {
-            margin-top: -10px;
-            height: 50px;
-            border-radius: 50%;
-
-            @media screen and (max-width: 640px) {
-              margin-left: -20px;
-            }
+          @media screen and (max-width: 640px) {
+            margin-left: -20px;
           }
         }
       }
+    }
 
-      //   NAV ITEMS
-      .li-items {
+    //   NAV ITEMS
+    .li-items {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: flex-end;
+      align-items: center;
+
+      @media screen and (max-width: 640px) {
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        top: -340px;
+        padding-top: 65px;
+        padding-bottom: 45px;
+        background-color: rgba(0, 0, 0, 0.95);
         display: flex;
-        flex-direction: row;
-        flex-grow: 1;
-        justify-content: flex-end;
-        align-items: center;
-
-        @media screen and (max-width: 640px) {
-          position: absolute;
-          width: 100vw;
-          left: 0;
-          top: -340px;
-          padding-top: 65px;
-          padding-bottom: 45px;
-          background-color: rgba(0, 0, 0, 0.95);
-          display: flex;
-          flex-direction: column;
-          transition: 0.35s;
-          z-index: -1;
-        }
+        flex-direction: column;
+        transition: 0.35s;
+        z-index: -1;
       }
     }
   }
+}
