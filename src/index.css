@@ -1,12 +1,12 @@
  html, body {
   margin: 0;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 
   font-family:'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     /* font-weight: lighter; */
+    scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

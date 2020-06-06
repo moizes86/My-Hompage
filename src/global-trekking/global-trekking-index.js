@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './global-trekking.styles.scss';
 
 import HomeScreen from './components/home-screen/home-screen.component';
@@ -8,20 +8,22 @@ import Subscribe from './components/subscribe/subscribe.component';
 import AboutUs from './components/about-us/about-us.component';
 import Reviews from './components/reviews/reviews.component';
 
+const navbarBackgroundColor = () => {
+  const nodeElNavbar = document.querySelector('.global-trekking nav');
+  window.pageYOffset > 100
+    ? nodeElNavbar.classList.add('navbar-bckgrnd-show')
+    : nodeElNavbar.classList.remove('navbar-bckgrnd-show');
+};
+
 class GlobalTrekking extends React.Component {
   componentDidMount() {
-    const addBackgroundColor = () => {
-      const nodeElNavbar = document.querySelector('.global-trekking nav');
-      window.pageYOffset > 100
-        ? nodeElNavbar.classList.add('navbar-bckgrnd-show')
-        : nodeElNavbar.classList.remove('navbar-bckgrnd-show');
-    };
-    window.addEventListener('scroll', addBackgroundColor);
+    window.addEventListener('scroll', navbarBackgroundColor);
   }
 
   componentWillUnmount() {
-    console.log('unmount');
+    window.removeEventListener('scroll', navbarBackgroundColor);
   }
+
   render() {
     return (
       <div className='global-trekking'>

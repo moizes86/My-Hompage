@@ -65,6 +65,7 @@ const MyCV = () => {
           </ul>
         </div>
 
+        {/*
         <div className='topic topic-list'>
           <h1>Other </h1>
           <ul>
@@ -82,7 +83,7 @@ const MyCV = () => {
             <li>History</li>
             <li>Middle East</li>
           </ul>
-        </div>
+        </div> */}
         <div className='download'>
           <a href='../../../assets/CV- Moshe Mantsur-May20.pdf' download>
              Full Version (PDF)
