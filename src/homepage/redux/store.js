@@ -9,6 +9,12 @@ if( process.env.NODE_ENV === 'development'){
     middlewares.push(logger);
 }
 
+
+console.log(process.env);
+console.log(process.env.NODE_ENV);
+console.log(process.env.NODE_ENV === 'development');
+
+
 const homepageStore = createStore(homepageReducer, applyMiddleware(...middlewares));
 
 export default homepageStore;
