@@ -1,3 +1,4 @@
+
 @import '../../../variables.styles.scss';
 
 .homepage > .sidebar .navigation {
@@ -6,17 +7,7 @@
     li {
       position: relative;
       padding: 3px 30px;
-      // display: flex;
 
-      // li:hover {
-      //   top: 1px;
-      // }
-
-      // li:hover:after {
-      //   content: '\f105';
-      //   padding-left: 13px;
-      //   font-family: FontAwesome;
-      // }
     }
 
      .active:nth-child(1):after{
@@ -41,23 +32,10 @@
 @media screen and (max-width: 1000px) {
   .homepage > .sidebar {
     .navigation {
-      visibility: hidden;
-      transition: 0.1s;
+      opacity: 0;
+      transition: 0.3s;
 
       ul {
-        width: 0;
-        opacity: 0;
-      }
-      ul li.active:after {
-        display: none;
-      }
-    }
-
-    .navigation.show {
-      visibility: visible;
-
-      ul {
-        opacity: 1;
         padding: 25px 0;
         width: 100%;
         right: 0;
@@ -67,11 +45,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 1.5rem;
+      }
 
-        li {
-          font-size: 1.5rem;
-          // opacity: 0.85;
-        }
+      ul li.active:after {
+        display: none; // hide arrow
+      }
+    }
+
+    .navigation.show {
+      opacity: 1;
+
+      ul {
 
         li.active {
           font-weight: bold;

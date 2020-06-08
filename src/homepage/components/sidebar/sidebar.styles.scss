@@ -9,14 +9,14 @@
   width: 25%;
   background-color: $theme-color;
   color: white;
-display: flex;
-flex-direction: column;
-justify-content: space-between ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-.hamburger{
-  display: none;
-  cursor: pointer;
-}
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
   /* List */
   ul {
     list-style: none;
@@ -44,18 +44,17 @@ justify-content: space-between ;
 @media screen and (max-width: 1000px) {
   .homepage > .sidebar {
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+    // top: 0;
+    // right: 0;
+    // left: 0;
     width: 100%;
     height: 50px;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    // justify-content: space-between;
     padding: 0 5%;
     background-color: $theme-color-no-opacity;
 
-    
     .hamburger {
       width: 30px;
       display: flex;

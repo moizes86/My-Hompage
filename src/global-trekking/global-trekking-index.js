@@ -16,11 +16,15 @@ const navbarBackgroundColor = () => {
 };
 
 class GlobalTrekking extends React.Component {
+
+  
   componentDidMount() {
+    document.querySelector('html').style.scrollBehavior = "smooth"; // Use smooth scroll in the page only after initial scroll to (0,0);
     window.addEventListener('scroll', navbarBackgroundColor);
   }
 
   componentWillUnmount() {
+    document.querySelector('html').style.scrollBehavior = "auto";
     window.removeEventListener('scroll', navbarBackgroundColor);
   }
 
