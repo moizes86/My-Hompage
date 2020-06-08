@@ -1,6 +1,6 @@
 #button-home {
   &.button-home-default{
-  width: 150px;
+  width: 100vw;
   padding-top: 30px;
   padding-bottom: 10px;
   position: absolute;
@@ -14,7 +14,7 @@
   text-align: center;
   border: none;
   z-index: 99;
-  animation: start 0.6s 0.1s;
+  animation: start 0.5s ;
   transition: 0.2s;
   &:hover {
     top: -30px;
@@ -40,7 +40,7 @@
 
   @keyframes start {
       75%{
-          transform: translateY(30px);
+          transform: translateY(25px);
       }
 
       100%{
