@@ -28,7 +28,7 @@ const contactsArr = [
     text: 'Moshe Mantsur',
   },
   {
-    href: 'https://github.com/moizes86',
+    href: 'https://github.com/moizes86?tab=repositories',
     icon: 'fa fa-github-square',
     type: 'Github',
     text: 'moizes86',
@@ -71,32 +71,24 @@ const projectsArr = [
     gif: TK_Gif,
     thumbnail: TK_Thumbnail,
     external: true,
-    linkURL: 'https://temanei-kineret.herokuapp.com/index'
+    linkURL: 'https://temanei-kineret.herokuapp.com/index',
   },
-]
-
+];
 
 const INITIAL_STATE = {
   homepageSections: ['portfolio', 'cv', 'contact'],
   contacts: contactsArr,
   projects: projectsArr,
   navbarShown: false,
-  loading: true,
 };
 
 const homepageReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case HomepageTypes.TOGGLE_NAVBAR_DROPDOWN:
-        return {
-            ...state,
-          navbarShown: !state.navbarShown
-        }
-
-        case HomepageTypes.ON_MOUNTED:
-          return {
-            ...state,
-            loading: false
-          }
+      return {
+        ...state,
+        navbarShown: !state.navbarShown,
+      };
 
     default:
       return state;
