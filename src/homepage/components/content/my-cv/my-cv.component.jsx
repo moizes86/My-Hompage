@@ -15,7 +15,7 @@ const MyCV = () => {
     <div className='content-default'>
       <div className='content-cv'>
         <div className='download'>
-          <a href='/cv-mm-05-2020.pdf' download>
+          <a href='/CV- Moshe Mantsur.pdf' download>
             Full Version (PDF)
           </a>
         </div>
@@ -85,7 +85,7 @@ const MyCV = () => {
           </ul>
         </div> */}
         <div className='download'>
-          <a href='../../../assets/CV- Moshe Mantsur-May20.pdf' download>
+          <a href='/CV- Moshe Mantsur.pdf' download>
              Full Version (PDF)
           </a>
         </div>
