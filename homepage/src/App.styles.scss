@@ -1,0 +1,31 @@
+.homepage {
+  // position: relative;
+  // display: flex;
+  // align-items: center;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  &::before {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    content: ' ';
+    display: block;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./assets/cover.jpg');
+    z-index: -1;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
+}

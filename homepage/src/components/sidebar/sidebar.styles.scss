@@ -1,0 +1,71 @@
+@import '../../variables.styles.scss';
+
+.homepage > .sidebar {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  // z-index: 2;
+  width: 25%;
+  background-color: $theme-color;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  /* List */
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+
+    .active {
+      opacity: 1;
+      font-weight: 300;
+    }
+
+    li:hover {
+      opacity: 1;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .homepage > .sidebar {
+    position: absolute;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    // justify-content: space-between;
+    padding: 0 5%;
+    background-color: $theme-color-no-opacity;
+
+    .hamburger {
+      width: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 13px 0;
+    }
+
+    .hamburger div {
+      border-bottom: 4px solid white;
+      border-radius: 10px;
+    }
+  }
+}

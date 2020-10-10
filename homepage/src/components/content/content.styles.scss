@@ -1,0 +1,19 @@
+@import '../../variables.styles.scss';
+.homepage > .content {
+  margin-left: 25%;
+
+  @media screen and (max-width: 1000px) {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+}
+
+.homepage .content-default {
+  background-color: $content-background-color;
+  min-height: 101vh;
+  padding: 25px 50px;
+
+  @media screen and (max-width: 640px) {
+    padding:  25px 0;
+  }
+}

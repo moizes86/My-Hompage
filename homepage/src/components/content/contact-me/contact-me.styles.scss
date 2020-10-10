@@ -1,0 +1,33 @@
+.contact-me {
+  padding: 0 25px;
+  ul {
+    padding: 0;
+    margin-top: 40px;
+    align-items: center;
+
+    li a {
+      display: inline-flex;
+      color: rgb(73, 80, 87);
+
+      i {
+        padding: 0 6px;
+        font-size: 20px;
+      }
+      .fa-facebook-square {
+        color: #0e8ef2;
+      }
+      .fa-github-square {
+        color: #24292e;
+      }
+      .fa-linkedin-square {
+        color: #0077b5;
+      }
+      .fa-envelope {
+        color: #d54b3d;
+      }
+
+      
+      
+    }
+  }
+}

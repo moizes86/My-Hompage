@@ -1,0 +1,69 @@
+
+@import '../../../variables.styles.scss';
+
+.homepage > .sidebar .navigation {
+
+  ul {
+    li {
+      position: relative;
+      padding: 3px 30px;
+
+    }
+
+     .active:nth-child(1):after{
+      display: none;
+    }
+    .active:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-right: 8px solid #fff;
+      bottom: 5px;
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .homepage > .sidebar {
+    .navigation {
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+
+      ul {
+        padding: 25px 0;
+        width: 100%;
+        right: 0;
+        top: 50px;
+        position: absolute;
+        background-color: $theme-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+      }
+
+      ul li.active:after {
+        display: none; // hide arrow
+      }
+    }
+
+    .navigation.show {
+      opacity: 1;
+      visibility: visible;
+      ul {
+
+        li.active {
+          font-weight: bold;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
